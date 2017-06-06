@@ -10,13 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170530130342) do
+ActiveRecord::Schema.define(version: 20170603090357) do
 
   create_table "accounts", force: :cascade do |t|
     t.integer "month"
     t.integer "limitation"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "remainder", default: 0
+    t.integer "total", default: 0
   end
 
   create_table "lists", force: :cascade do |t|
