@@ -4,6 +4,7 @@ class AccountsController < ApplicationController
   
   def index
     @accounts = Account.all
+    @lists = List.all
   end
 
   def new
